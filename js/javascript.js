@@ -1,3 +1,4 @@
+//import {clear, simpleSort, searchSort} from "/js/jsmodule.js";
 //global to save on calls
 let courseArray;
 
@@ -34,7 +35,6 @@ function start(courseArray) {
     }
 }
 
-//removes elements from list (filtration)
 function clear() {
     let table = document.getElementById("content");
     let tableContent = table.getElementsByTagName("tr");
@@ -57,6 +57,9 @@ function simpleSort(val) {
         case 2:
             simpleSort.sort((a, b) => String(a[2]).localeCompare(b[2])); 
             break;
+        case 3: {
+            return;
+        }
     }
     clear();
     start(simpleSort);
@@ -71,3 +74,4 @@ function searchSort(search) {
 
 //revving up the script
 getData();
+simpleSort(3);
