@@ -1,0 +1,12 @@
+{
+  "name": "lab2",
+  "version": "1.0.0",
+  "description": "Laboration 2",
+  "source": "src/index.html",
+  "scripts": {
+    "start" : "parcel",
+    "build" : "parcel build"
+  },
+  "author": "Max Gagner (maga2101)",
+  "license": "ISC"
+}
