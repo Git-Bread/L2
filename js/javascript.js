@@ -45,7 +45,7 @@ function clear() {
 }
 
 //simple name sort, checks value from onclick on categories
-function simpleSort(val) {
+window.simpleSort = function simpleSort(val) {
     let simpleSort = courseArray;
     switch (val) {
         case 0:
@@ -57,16 +57,13 @@ function simpleSort(val) {
         case 2:
             simpleSort.sort((a, b) => String(a[2]).localeCompare(b[2])); 
             break;
-        case 3: {
-            return;
-        }
     }
     clear();
     start(simpleSort);
 }
 
 //search based of content, checks if any of the three fields contains the substring and includes those, quite proud of this one. Might be expensive tho, no clue.
-function searchSort(search) {
+window.searchSort = function searchSort(search) {
     let searchSort = courseArray;
     searchSort = searchSort.filter((a) => a[0].toLowerCase().includes(search.toLowerCase()) || a[1].toLowerCase().includes(search.toLowerCase()) || a[2].toLowerCase().includes(search.toLowerCase()));
     start(searchSort);
@@ -74,4 +71,3 @@ function searchSort(search) {
 
 //revving up the script
 getData();
-simpleSort(3);
